@@ -9,10 +9,67 @@
 
 <div id="codecontainer">
 	
-	<p id="iliketocode"> I love everything code. </p>
+	<div id="iliketocodecontainer"> <p id="iliketocode"></p> <p id="iliketocodetext"></p> </div>
 </div>
 
 <script>
+	
+	var counter = 0;
+	var guicounter = 32;
+	var middlecounter = 50;
+	var changedir = false;
+	
+	var text = " love everything code.";
+	
+	function printText()
+	{
+		
+		counter++;
+		
+		if(guicounter < 110)
+		{
+				if(changedir == false)
+				{
+					guicounter++;	
+				}
+				else
+				{
+					guicounter--;
+				}
+				
+		}
+		else
+		{
+			changedir = true;
+			guicounter--;
+		}
+	
+		var res = text.substring(0, counter);
+		$( "#iliketocodetext" ).text(res);
+	}
+	
+	function fadefunction()
+	{
+		
+		$(  "#loader" ).css( "width", (guicounter * guicounter) );
+		
+		$( "#iliketocode" ).fadeIn(350, function(){
+			
+			printText();	
+			
+				    	$( "#iliketocode" ).fadeOut(350, function(){
+					    	
+					    	
+					    	printText();	
+					    	
+					    	
+					    	fadefunction();
+				    	
+				    	}
+				    	
+				    	);
+			    	});
+	}
 
 $( document ).ready(function() {
 	
@@ -24,17 +81,22 @@ $( document ).ready(function() {
   	$( "#loader" ).fadeIn( 3000, function() {
     
     	//$( this ).fadeTo( "slow", 0.33 );
-    	$( "#loading" ).fadeTo("slow", 0.33, function()
+    	$( "#loading" ).fadeOut("slow", function()
     	{
 	    	
 	    	// $( "#loading" ).fadeTo("slow", 0.33, function()
-	    	$( "#loader" ).fadeTo( "slow", 0.22, function() {
+	    	$( "#loader" ).fadeTo( "slow", 0.50, function() {
 		    
-		    	
-		    	$( "#codecontainer" ).hide();
 		    	$( "#codecontainer" ).fadeIn(500, function()
 		    	{
-			    	$( "#iliketocode" ).fadeIn(500);
+			    	$( "#iliketocode" ).text("l");
+			    	$( "#iliketocodetext" ).show();
+			    	
+			    	
+			    	fadefunction();
+			    	
+			    	
+			    	
 		    	});
     		});
     
