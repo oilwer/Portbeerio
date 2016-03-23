@@ -9,7 +9,6 @@ app.config([
     $routeProvider
       .when("/", {
         templateUrl: "templates/home.html",
-        controller: "homeCtrl"
       })
       .when("/dash", {
         templateUrl: "templates/dash.html"

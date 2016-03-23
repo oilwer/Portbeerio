@@ -23,7 +23,7 @@ app.use(m.express.static(m.path.join(__dirname, 'www')));
 
 //https://github.com/expressjs/session
 app.use(m.expresssession({
-  secret: 'keyboard cat',
+  secret: 'Portbeerio',
   resave: true,
   saveUninitialized: true,
   cookie: { secure: true }
@@ -56,7 +56,7 @@ app.get('*', function (req, res) {
 });
 
 // Start up
-var port = 3000;
+var port = 1337;
 app.listen(port, function(){
   console.log("Express server listening on port " + port);
 });

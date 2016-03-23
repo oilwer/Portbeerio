@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mongr</title>
+    <title>Portbeer.io</title>
     <meta charset="utf-8">
     <!-- set base href for angular html5 mode -->
     <base href="/"/>
@@ -17,6 +17,10 @@
     <script src="libs/angular-resource.min.js"></script>
     <!-- https://angular-ui.github.io/bootstrap/ -->
     <script src="libs/ui-bootstrap-tpls.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">    
+    <link rel="stylesheet" type="text/css" href="css/swag.css">
 
 
     <!-- our JS -->
@@ -25,16 +29,11 @@
     <script src="config.js"></script>
     <!-- mongresto $resources -->
     <script src="/api/ngResources/app"></script>
-    <!-- controllers -->
-    <script src="controllers/homeCtrl.js"></script>
+    <!-- controllers are shit -->
     <!-- directives (widgets) -->
-    <script src="widgets/header/nav.js"></script>
-    <script src="widgets/form/base.js"></script>
-    <script src="widgets/item/base.js"></script>
-    <script src="widgets/item/list.js"></script>
-    <script src="widgets/modelanything/modelanythingstart.js"></script>
-    <script src="widgets/modelanything/dynamic.js"></script>
-    <script src="widgets/modelanything/plugins/testplug.js"></script>
+    <script src="widgets/beer/code.js"></script>
+    <script src="widgets/beer/loader.js"></script>
+    
 
 
     <!-- all CSS -->
@@ -42,8 +41,6 @@
   </head>
   <body ng-app="mongr">
     <!-- nav area -->
-    <header-nav></header-nav>
-    <!-- app view area -->
     <div ng-view></div>
   </body>
 </html>

@@ -1,0 +1,47 @@
+<div id="loadercontainer">
+	
+	<p id="loading"> Writing Node.js code.. </p>
+	
+	<div id="loader">
+	
+	</div>
+</div>
+
+<div id="codecontainer">
+	
+	<p id="iliketocode"> I love everything code. </p>
+</div>
+
+<script>
+
+$( document ).ready(function() {
+	
+	
+  
+  $( "#loading" ).fadeIn( 1000, function() {
+    
+    
+  	$( "#loader" ).fadeIn( 3000, function() {
+    
+    	//$( this ).fadeTo( "slow", 0.33 );
+    	$( "#loading" ).fadeTo("slow", 0.33, function()
+    	{
+	    	
+	    	// $( "#loading" ).fadeTo("slow", 0.33, function()
+	    	$( "#loader" ).fadeTo( "slow", 0.22, function() {
+		    
+		    	
+		    	$( "#codecontainer" ).hide();
+		    	$( "#codecontainer" ).fadeIn(500, function()
+		    	{
+			    	$( "#iliketocode" ).fadeIn(500);
+		    	});
+    		});
+    
+  		});
+    
+  	});
+	});
+});
+
+</script>
